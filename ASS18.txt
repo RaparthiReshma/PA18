@@ -1,0 +1,26 @@
+                        //ARRANGING OF LIST//
+NumList = []
+
+Number = int(input("Please enter the Total Number of List Elements: "))
+for i in range(1, Number + 1):
+    value = int(input("Please enter the Value of %d Element : " %i))
+    NumList.append(value)
+
+for i in range (Number):
+    for j in range(i + 1, Number):
+        if(NumList[i] > NumList[j]):
+            temp = NumList[i]
+            NumList[i] = NumList[j]
+            NumList[j] = temp
+
+print("Element After Sorting List in Ascending Order is : ", NumList)
+
+//OUTPUT//
+Please enter the Total Number of List Elements: 5
+Please enter the Value of 1 Element : 0
+Please enter the Value of 2 Element : 7
+Please enter the Value of 3 Element : 4
+Please enter the Value of 4 Element : 1
+Please enter the Value of 5 Element : 10
+Element After Sorting List in Ascending Order is :  [0, 1, 4, 7, 10]
+> 
